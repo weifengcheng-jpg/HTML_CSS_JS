@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            margin: 10px;
+            padding: 5px;
+            font-size: 12px;
+            line-height: 25px;
+        }
+        #father{
+            border: 1px solid #666;
+            padding: 0;
+            position: relative;
+        }
+        #first{
+            background-color:aquamarine;
+            border: 1px dashed #666;
+        }
+        #second{
+            background-color: beige;
+            border: 1px dashed #666;
+            /* position: absolute; 目前相对于浏览器定位的 如果没有第18行的话 */
+            position: absolute;
+            right: 30px;
+            top: -10px;
+            
+        }
+        #third{
+            background-color: cadetblue;
+            border: 1px dashed #666;
+            
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="father">
+        <div id="first">第一个盒子</div>
+        <div id="second">第二个盒子</div>
+        <div id="third">第三个盒子</div>
+    </div>
+
+</body>
+</html>
