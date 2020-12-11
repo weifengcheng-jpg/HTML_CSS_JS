@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- ES6 -->
+    <script>
+
+        'use strict'
+        new Map();
+        new Set();
+
+        // ES6 map set 无非增删改查
+        // 学生的成绩, 学生的名字
+        // var names = ["tom", "jack", "weifc"];
+        // var scores = [100, 90, 80];
+
+        let map = new Map([['tom', 100],['jack', 90],['weifc', 80]]);
+        let name = map.get('tom'); //通过key获取value
+        map.set('admin', 1234); //新增或删除
+        console.log(name);
+        map.delete("tom"); //删除tom k值
+
+        let set = new Set([1, 1, 1, 1, 2, 3]); //set 可以去重
+        set.delete(4); //把4删除掉
+        set.add(6);
+
+
+    </script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="" type="text/css">
+    <script type="text/javascript" src=""></script>
+</head>
+<body>
+
+    <p id = "js">javascript</p>
+    <div id = "list">
+        <p id ="se">javase</p>
+        <p id ="ee">javaee</p>
+        <p id ="me">javame</p>
+    </div>
+
+    <script>
+        // let js = document.getElementById('js'); //已经存在的节点
+        // let list = document.getElementById('list');
+        // //通过JS 创建一个新的节点
+        // let newP = document.createElement('p'); //创建一一个p标签
+        // newP.id = 'newP'; //相当于 <p id="newP"></p>
+        // newP.innerText = 'hello, js';
+        // // list.appendChild(newP);
+        // // 创建一个标签节点,
+        // let myScript = document.createElement('script');
+        // myScript.setAttribute('type', 'text/javascript');
+        // // 可以创建一个 Style 标签
+        // let myStyle = document.createElement('style'); //创建一个空 style 标签
+        // myStyle.setAttribute('type', 'text/css');
+        // myStyle.innerHTML = 'body {background-color: chartreuse;}'; //设置标签内容
+        // document.getElementsByTagName('head')[0].appendChild(myStyle);
+
+        //list.appendChild(js); //追加元素
+
+        let ee = document.getElementById('ee');
+        let js = document.getElementById('js');
+        let list = document.getElementById('list');
+        // list 节点, insertBefore(newNode, targetNode):
+        ee.insertBefore(js, ee);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        var Student = {
+            name: "weifc",
+            age: 3,
+            run: function () {
+                console.log(this.name + " run ...");
+            }
+        };
+
+        var xiaoming = {
+            name: "xiaoming"
+        };
+
+        //原型对象
+        xiaoming.__proto__ = Student;
+
+        var Bird = {
+            fly: function () {
+                console.log(this.name + " fly...");
+            }
+        }
+
+        // 小明的原型是 Bird
+        xiaoming.__proto__ = Bird;
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

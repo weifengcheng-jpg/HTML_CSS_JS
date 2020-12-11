@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        'use strict'
+        // function qj() {
+        //     let x = 1;
+        //     x = x + 1;
+        // }
+        // function qj() {
+        //     let x = 1;
+        //     x = x + 1;
+        // }
+
+        // function qj() {
+        //     let x = 1;
+        //
+        //     //内部函数可以访问外部函数的成员, 反之则不行~
+        //     function qj2() {
+        //         let y = x + 1;
+        //     }
+        //
+        //     let z = y + 1; //y已经被销毁了吧
+        // }
+
+        // function qj() {
+        //     let x = 1;
+        //     function qj2() {
+        //         let x = 'A';
+        //         console.log('inner' + x); //outer1
+        //     }
+        //     console.log('outer' + x); //innerA
+        //     qj2();
+        // }
+        //
+        // qj();
+
+        // function qj() {
+        //     let x = "x" + y;
+        //     console.log(x);
+        //     let y = 'y';
+        // }
+
+        // function qj2() {
+        //     let y;
+        //
+        //     let x = "x" + y;
+        //     console.log(x);
+        //     y = 'y';
+        // }
+
+        // function qj2() {
+        //     let x = 1;
+        //     y = x + 1;
+        //     z, i, z; //undefined;
+        //
+        //     //之后随意用
+        // }
+
+        //全局变量
+        // x = 1;
+        // function f() {
+        //     console.log(x);
+        // }
+        // f();
+        // console.log(x);
+
+        // let x = 'xxx';
+        // window.alert(x);
+        // alert(window.x); //默认所有的全局变量, 都会自动绑定在window对象下;
+
+        // let x = 'xxx';
+        // window.alert(x);
+        // let old_alert = window.alert;
+        // //old_alert(x);
+        //
+        // window.alert = function () {
+        //
+        // };
+        // // 发现 alert() 失效了
+        // window.alert(123);
+        //
+        // //恢复
+        // window.alert = old_alert;
+        // window.alert(456);
+
+        // 唯一全局变量
+        // let weifc = {};
+        //
+        // //定义全局变量
+        // weifcApp.name = 'weifc';
+        // weifcApp.add = function (a, b) {
+        //     return a + b;
+        // }
+
+        // function aaa() {
+        //     for (let i = 0; i < 100; i++) {
+        //         console.log(i);
+        //     }
+        //     console.log(i + 1); //i 出了这个作用域还可以使用
+        // }
+
+        // var PI = '3.14';
+        // PI = '213'; //可以改变这个值
+        // console.log(PI);
+
+        // let weifc = {
+        //     name: 'weifc',
+        //     bitrh: 2001,
+        //     // 方法
+        //     age: function () {
+        //         // 今年 - 出生的年
+        //         let now = new Date().getFullYear();
+        //         return now - this.bitrh;
+        //     }
+        // }
+
+        function getAge() {
+            var now = new Date().getFullYear();
+            return now - this.bitrh;
+        }
+        var weifc = {
+            name: 'weifc',
+            bitrh: 2001,
+            age: getAge()
+        }
+
+        var xiaoming = {
+            name: '小明',
+            bitrh: 2000,
+            age: getAge()
+        }
+
+        //getAge.apply(xiaoming, []); // this, 指向了 xiaoming, 参数为空
+        //getAge.apply(weifc, []); // this, 指向了 weifc, 参数为空
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

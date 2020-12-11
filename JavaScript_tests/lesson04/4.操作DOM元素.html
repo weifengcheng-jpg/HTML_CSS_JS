@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- cdn 引入 -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+    <ul id="test-ul">
+        <li class="js">JavaScipt</li>
+        <li name="java">java</li>
+    </ul>
+
+    <script>
+        // document.getElementById('')
+
+        $('#test-ul li[name=java]').text();
+        $('#test-ul').html('<strong>123</strong>');
+
+        $('#test-ul li[name=java]').css({"color" : "red"});
+
+        $('#test-ul li[name=java]').show();
+        $('#test-ul li[name=java]').hide();
+    </script>
+
+</body>
+</html>

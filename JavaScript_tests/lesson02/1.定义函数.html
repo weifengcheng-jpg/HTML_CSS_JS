@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        'use strict';
+
+        // function abs(x) {
+        //     if (x >= 0) {
+        //         return x;
+        //     } else {
+        //         return -x;
+        //     }
+        // }
+
+        //和上面的写法, 功能等同
+        // var abs = function (x) {
+        //     if (x >= 0) {
+        //         return x;
+        //     } else {
+        //         return -x;
+        //     }
+        // }
+
+        // var abs = function (x) {
+        //     arguments
+        //     //手动抛出异常
+        //     if (typeof x != 'number') {
+        //         throw 'Not a Number';
+        //     }
+        //     if (x >= 0) {
+        //         return x;
+        //     } else {
+        //         return -x;
+        //     }
+        // }
+
+        let abs = function (x) {
+            console.log("x=>"+x);
+            for (let i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+            }
+            if (arguments.length > 1) {
+                arguments[1];
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
